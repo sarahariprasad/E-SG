@@ -1,0 +1,147 @@
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+
+    <a class="navbar-brand" href="/"><img src="../../uploads/products/logo_2.jpg" class="img-fluid" alt="Logo"></a>
+
+
+    <a class="navbar-brand" href="/"><b>Shri Gowri Milk and Rice Store</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+
+
+        <ul class="navbar-nav my-0 my-lg-4">
+            {% if request.session.customer %}
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="">Welcome! {{request.session.customer}}<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/cart"><i class="fa fa-cart-arrow-down mr-1"
+                                                    style="color:#212121; font-size:21px" aria-hidden="true"></i><span
+                        class="badge badge-info"> {{request.session.cart|length}} </span></a>
+
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/orders"> <b>Orders</b> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/logout"><b>Logout</b><span class="sr-only">(current)</span></a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/cart"><i class="fa fa-cart-arrow-down mr-1"
+                                                    style="color:#212121; font-size:21px" aria-hidden="true"></i><span
+                        class="badge badge-info"> {{request.session.cart|length}} </span></a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/register"> <b>Register</b> <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/login"><b>Login</b><span class="sr-only">(current)</span></a>
+            </li>
+            {% endif %}
+
+
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+{% block body %}
+
+
+{% endblock body %}
+
+
+</body>
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
+
+    <div style="background-color:#ffbb33">
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row py-4 d-flex align-items-center">
+
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3  mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact Us</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"  style="width: 40%;">
+                    <p>
+                        <i class="fas fa-home mr-3" style="text-align:start;"></i>Pristine place appartments,<br>Balaji layout,Gajularamarm,<br>Hyderabad</p>
+                     <p>
+                        <i class="fas fa-phone mr-3" ></i> + 91 9985039503</p>
+                     <p>
+                        <i class="fas fa-phone mr-3" ></i> + 91 9581290390</p>
+
+
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> sgm@gmail.com</p>
+
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+    </div>
+
+</footer>
+<!-- Footer -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+</html>
+
+
+
+
