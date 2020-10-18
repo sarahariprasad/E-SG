@@ -12,7 +12,53 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+     <link rel="icon" href="../../uploads/products/logo_1.jpg">
 
+    <style>
+.carousel .item{
+height: 250px;
+}
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 250px;
+}
+.list-group-item-warning a:hover{
+    color:#ff4000!important;
+background:#eee !important;
+}
+.list-group-item{border:none;}
+.list-group-item-warning{background:none;padding: 0;}
+
+.list-group-item-warning, .active{
+    color:yellow;
+
+}
+.list-group-item-action:before{
+    content:'>>';
+    font-size: 10px;
+    line-height: 20px;
+    position: absolute;
+    left: 2px;
+    top: 14px;}
+
+    .list-items{
+        padding:0;
+    }
+    .list-items li{
+    list-style:none;
+    clear: both;
+    }
+     .list-items li span{    float: left;}
+
+     .list_p{    float: left;
+    position: relative;
+    left:0px;
+}
+.card{margin-bottom:20px;}
+
+</style>
 </head>
 <body>
 
@@ -20,8 +66,7 @@
 
     <a class="navbar-brand" href="/"><img src="../../uploads/products/logo_2.jpg" class="img-fluid" alt="Logo"></a>
 
-
-    <a class="navbar-brand" href="/"><b>Shri Gowri Milk and Rice Store</b></a>
+    <a class="navbar-brand" href="/"><b>Shri Gowri Milk & Rice Store</b></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -100,16 +145,14 @@
                     <!-- Links -->
                     <h6 class="text-uppercase font-weight-bold">Contact Us</h6>
                     <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"  style="width: 40%;">
-                    <p>
-                        <i class="fas fa-home mr-3" style="text-align:start;"></i>Pristine place appartments,<br>Balaji layout,Gajularamarm,<br>Hyderabad</p>
-                     <p>
-                        <i class="fas fa-phone mr-3" ></i> + 91 9985039503</p>
-                     <p>
-                        <i class="fas fa-phone mr-3" ></i> + 91 9581290390</p>
 
 
-                    <p>
-                        <i class="fas fa-envelope mr-3"></i> sgm@gmail.com</p>
+                    <ul class="list-items">
+                        <li><span><i class="fas fa-home mr-3" style="text-align:start;"></i></span> <p class="list_p">Pristine place appartments,<br>Balaji layout,Gajularamarm,<br>Hyderabad</p></li>
+                        <li><span><i class="fas fa-phone mr-3" ></i></span> + 91 9985039503</li>
+                        <li><span><i class="fas fa-phone mr-3" ></i></span> + 91 9581290390</li>
+                        <li><span><i class="fas fa-envelope mr-3"></i></span> sgstoresinfo@gmail.com</li>
+                    </ul>
 
 
                 </div>
